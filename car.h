@@ -136,6 +136,7 @@ public:
 
     ~car()
     {
+    cout<<"Машины удалены!\n";
     delete [] car_mark;
     delete [] car_model;
     delete [] car_engine;
