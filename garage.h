@@ -8,5 +8,5 @@ public:
     virtual void get_mark()=0;       ///Получение марки транспорта
     virtual void set_model()=0;      ///Установка модели транспорта
     virtual void get_model()=0;      ///Получение модели транспорта
-    virtual ~garage() {};
+    virtual ~garage() {cout<<"Гараж удалён!\n";};
 };
