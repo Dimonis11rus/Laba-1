@@ -153,6 +153,7 @@ public:
 
     ~motorbike()
     {
+    cout<<"Мотоциклы удалены!\n";
     delete [] motorbike_mark;
     delete [] motorbike_model;
     delete [] motorbike_engine;
