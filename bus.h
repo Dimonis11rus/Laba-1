@@ -153,6 +153,7 @@ public:
 
     ~bus()
     {
+    cout<<"Автобусы удалены!\n";
     delete [] bus_mark;
     delete [] bus_model;
     delete [] bus_seats;
