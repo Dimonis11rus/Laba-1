@@ -10,6 +10,7 @@ int main()
     car *car_mas = new car[N];
     motorbike *moto_mas = new motorbike[N];
     bus *bus_mas = new bus[N];
+    //motorbike a("FRG", "900", "1", "170", "all");
     system("cls");
     keeper s;
     int choise1, choise2;
@@ -165,9 +166,10 @@ int main()
                 outfile.close();
             }
             break;
-        case 0: {exit(1);}
         }
     system("cls");
+    if(choise1==0)
+        break;
     }
     delete [] str;
     delete [] car_mas;
