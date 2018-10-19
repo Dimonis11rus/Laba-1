@@ -15,15 +15,15 @@ public:
 	motorbike();
 	motorbike(char *a, char *b, char *c, char *d, char *e);
 	motorbike(const motorbike & arg);
-    void set_mark();         ///люпйю лнрнжхйкю
+    void set_mark();
     void get_mark();
-    void set_model();         ///лндекэ лнрнжхйкю
+    void set_model();
     void get_model();
-    void set_moto_engine();         ///назел дбхфйю лнрнжхйкю
+    void set_moto_engine();
     void get_moto_engine();
-    void set_power();         ///лнымнярэ лнрнжхйкю
+    void set_power();
     void get_power();
-    void set_terrain();         ///леярмнярэ дкъ лнрнжхйкю
+    void set_terrain();
     void get_terrain();
     ~motorbike();
 };
