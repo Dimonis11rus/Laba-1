@@ -1,9 +1,13 @@
 #include "head.h"
-#include "car.h"
-#include "motorbike.h"
-#include "bus.h"
-#include "keeper.h"
-
+char first[20], second[20], third[20], forth[20], fifth[20];
+char del_mark[20], del_model[20];
+int car_count=0, moto_count=0, bus_count=0;
+HANDLE hConsoleHandle=GetStdHandle(STD_OUTPUT_HANDLE);
+#include "garage.h"
+#include "car.cpp"
+#include "motorbike.cpp"
+#include "bus.cpp"
+#include "keeper.cpp"
 int main()
 {
     setlocale(LC_ALL, "Rus");
@@ -15,19 +19,38 @@ int main()
     keeper s;
     int choise1, choise2;
     char *str=new char[1024];
-    ofstream outfile("BD.txt", ios::app);         outfile.close();    ///чтобы создался файл
+    /*ifstream ifile("BD.txt");
+    cout<<ifile<<endl;
+    system("pause");
+    ifile.close();    ///чтобы создался файл*/
+
     while(1)
     {
         int q=0, cnt=0;
-        ifstream infile("BD.txt");
-        while(!infile.eof())
+        try
         {
-            infile>>str[q];
-            if(str[q]=='*' || str[q]=='@' || str[q]=='#')
-                cnt++;                                         ///      cnt - чтобы определить количество транспорта в базе
-            q++;
+            ifstream infile("BD.txt");
+            if (!infile)
+            {
+                throw 404;
+            }
+            else
+            {
+                while(!infile.eof())
+                {
+                    infile>>str[q];
+                    if(str[q]=='*' || str[q]=='@' || str[q]=='#')
+                        cnt++;                                         ///      cnt - чтобы определить количество транспорта в базе
+                    q++;
+                }
+                infile.close();
+            }
         }
-        infile.close();
+        catch(int i)
+        {
+            cout<<"error "<<i<< " - файл отсутствует!"<<endl;
+            ofstream outfile("BD.txt", ios::app);         outfile.close();  ///а тут создается файл, но т.к. он пустой, то считывание не идёт
+        }
         int ii=0;
         car_count=0;    moto_count=0;   bus_count=0;
         int w=0;            ///      w-счетчик для цикла
@@ -177,5 +200,4 @@ int main()
     delete [] bus_mas;
     return 0;
 }
-
 
