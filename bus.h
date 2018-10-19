@@ -15,15 +15,15 @@ public:
 	bus();
 	bus(char *a, char *b, char *c, char *d, char *e);
 	bus(const bus & arg);
-    void set_mark();         ///люпйю юбрнасяю
+    void set_mark();
     void get_mark();
-    void set_model();         ///лндекэ юбрнасяю
+    void set_model();
     void get_model();
-    void set_seats();         ///яхдъвхе леярю б юбрнасяе
+    void set_seats();
     void get_seats();
-    void set_all_passengers();         ///наыее йнк-бн леяр б юбрнасяе
+    void set_all_passengers();
     void get_all_passengers();
-    void set_destination();         ///йнмевмши осмйр
+    void set_destination();
     void get_destination();
     ~bus();
 };
