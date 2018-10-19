@@ -15,15 +15,15 @@ public:
 	car();
 	car(char *a, char *b, char *c, char *d, char *e);
 	car(const car & arg);
-    void set_mark();         ///люпйю юбрнлнахкъ
+    void set_mark();
     void get_mark();
-    void set_model();        ///лндекэ юбрнлнахкъ
+    void set_model();
     void get_model();
-    void set_car_engine();         ///назел дбхфйю юбрнлнахкъ
+    void set_car_engine();
     void get_car_engine();
-    void set_color();         ///жбер юбрнлнахкъ
+    void set_color();
     void get_color();
-    void set_kpp();         ///йнпнайю оепедюв юбрнлнахкъ
+    void set_kpp();
     void get_kpp();
     ~car();
 };
